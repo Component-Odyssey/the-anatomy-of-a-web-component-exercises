@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Album Odyssey</title>
+</head>
+
+<body>
+  <div>
+    <h2>
+      Test Cases
+    </h2>
+    <test-case id="test-1" description="Template with id='album-art-template' exists"></test-case>
+    <test-case id="test-2" description="Template HTML structure matches album art HTML structure"></test-case>
+  </div>
+
+  <template id="album-art-template">
+    <div>
+      <img class="square-aspect-ratio" src="" alt="" />
+      <h3></h3>
+      <p></p>
+    </div>
+  </template>
+
+  <header class="flex-row space-between bg-accent padding-h-4 padding-v-2">
+    <h1 class="title">Album Odyssey</h1>
+    <input class="border-radius" type="search" placeholder="e.g., nirvana nevermind" />
+  </header>
+  <nav class="bg-dark">
+    <ul class="flex-row padding-h-4 text-center">
+      <li class="bg-gray-2 padding-v-2 padding-h-4 vertical-center-align">
+        <a href="">
+          <p>Home</p>
+        </a>
+      </li>
+      <li class="bg-gray-1 padding-v-2 padding-h-4 vertical-center-align">
+        <a href="">
+          <p>Top 40</p>
+        </a>
+      </li>
+      <li class="bg-gray-1 padding-v-2 padding-h-4 vertical-center-align">
+        <a href="">
+          <p>Artists</p>
+        </a>
+      </li>
+      <li class="bg-gray-1 padding-v-2 padding-h-4 vertical-center-align">
+        <a href="">
+          <p>Songs</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="padding-h-4 padding-v-2">
+    <h2 class="title">
+      Albums of 2023
+    </h2>
+    <hr />
+
+    <div>
+      <h2>Test Cases</h2>
+      <ul>
+        <li><span class="indicator"></span><span class="state"></span>: Can find template element with id
+          'album-art-template'
+      </ul>
+    </div>
+
+    <div class="padding-v-2 grid">
+      <div>
+        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/kali-uchis-new-album.webp"
+          alt="Kali Uchis album cover" />
+        <h3>Kali Uchis</h3>
+        <p>Red Moon in Venus</p>
+      </div>
+      <div>
+        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/Killer-Mike-Michael.webp"
+          alt="Killer Mike album cover" />
+        <h3>Killer Mike</h3>
+        <p>Michael</p>
+      </div>
+      <div>
+        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/Paramore.webp"
+          alt="Paramore album cover" />
+        <h3>Paramore</h3>
+        <p>This is Why</p>
+      </div>
+      <div>
+        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/Space+Heavy-min.jpeg"
+          alt="King Krule album cover" />
+        <h3>King Krule</h3>
+        <p>Space Heavy</p>
+      </div>
+      <div>
+        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/Squid-O-Monolith.webp"
+          alt="Squid album cover" />
+        <h3>Squid</h3>
+        <p>O Monolith</p>
+      </div>
+      <div>
+        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/Wednesday-Rat-Saw-God.webp"
+          alt="Wednesday album cover" />
+        <h3>Wednesday</h3>
+        <p>Rat Saw God</p>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    const test1El = document.getElementById('test-1');
+    const test1 = () => {
+      const template = document.getElementById('album-art-template');
+
+      console.log(template)
+
+      return Boolean(template)
+    }
+
+    test1El.setAttribute('pass', test1())
+
+    const test2El = document.getElementById('test-2');
+    const test2 = () => {
+      const template = document.getElementById('album-art-template');
+
+      if (!template) return false;
+
+      const content = template.content;
+      const hasDiv = content.children.length == 1 && content.children[0].tagName == 'DIV';
+
+      if (!hasDiv) return false
+
+      const divEl = content.children[0];
+      const hasThreeChildren = divEl.children.length == 3;
+
+      if (!hasThreeChildren) return false
+      return divEl.children[0].tagName == 'IMG' && divEl.children[1].tagName == 'H3' && divEl.children[2].tagName == 'P';
+    }
+
+    test2El.setAttribute('pass', test2())
+    import './test-case.js'
+  </script>
+</body>
+
+</html>
