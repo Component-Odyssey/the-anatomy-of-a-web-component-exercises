@@ -13,21 +13,12 @@
 </head>
 
 <body>
-  <div>
-    <h2>
-      Test Cases
-    </h2>
+  <test-case-wrapper>
     <test-case id="test-1" description="Template with id='album-art-template' exists"></test-case>
     <test-case id="test-2" description="Template HTML structure matches album art HTML structure"></test-case>
-  </div>
+  </test-case-wrapper>
 
-  <template id="album-art-template">
-    <div>
-      <img class="square-aspect-ratio" src="" alt="" />
-      <h3></h3>
-      <p></p>
-    </div>
-  </template>
+  <!-- Add your template element here -->
 
   <header class="flex-row space-between bg-accent padding-h-4 padding-v-2">
     <h1 class="title">Album Odyssey</h1>
@@ -62,14 +53,6 @@
       Albums of 2023
     </h2>
     <hr />
-
-    <div>
-      <h2>Test Cases</h2>
-      <ul>
-        <li><span class="indicator"></span><span class="state"></span>: Can find template element with id
-          'album-art-template'
-      </ul>
-    </div>
 
     <div class="padding-v-2 grid">
       <div>
@@ -111,39 +94,7 @@
     </div>
   </main>
 
-  <script type="module">
-    const test1El = document.getElementById('test-1');
-    const test1 = () => {
-      const template = document.getElementById('album-art-template');
-
-      console.log(template)
-
-      return Boolean(template)
-    }
-
-    test1El.setAttribute('pass', test1())
-
-    const test2El = document.getElementById('test-2');
-    const test2 = () => {
-      const template = document.getElementById('album-art-template');
-
-      if (!template) return false;
-
-      const content = template.content;
-      const hasDiv = content.children.length == 1 && content.children[0].tagName == 'DIV';
-
-      if (!hasDiv) return false
-
-      const divEl = content.children[0];
-      const hasThreeChildren = divEl.children.length == 3;
-
-      if (!hasThreeChildren) return false
-      return divEl.children[0].tagName == 'IMG' && divEl.children[1].tagName == 'H3' && divEl.children[2].tagName == 'P';
-    }
-
-    test2El.setAttribute('pass', test2())
-    import './test-case.js'
-  </script>
+  <script type="module" src="./test-cases.js"></script>
 </body>
 
 </html>

@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@web/dev-server": "^0.3.0"
+    "@web/dev-server": "^0.3.0",
+    "odyssey-test-utils": "^1.0.0"
   }
 }
