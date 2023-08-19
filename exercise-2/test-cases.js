@@ -41,10 +41,10 @@ test4El.test(() => {
   const artistName = artistNameEl.textContent;
   const albumName = albumNameEl.textContent;
 
-  const isValidImgSrc = imgSrc === 'https://component-odyssey.s3.amazonaws.com/Space+Heavy-min.jpeg'
-  const isValidImgAlt = imgAlt === 'King Krule album cover'
-  const isValidArtistName = artistName === 'King Krule'
-  const isValidAlbumName = albumName === 'Space Heavy'
+  const isValidImgSrc = imgSrc === 'https://component-odyssey.s3.amazonaws.com/w95-959595.wav.png'
+  const isValidImgAlt = imgAlt === '95 album cover'
+  const isValidArtistName = artistName === '9 5'
+  const isValidAlbumName = albumName === '959595.wav'
 
 
   return isValidImgSrc && isValidImgAlt && isValidArtistName && isValidAlbumName;
