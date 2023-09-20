@@ -17,7 +17,7 @@ We won't be applying styles in this exercise, so your album covers should be dis
 
 In the constructor you'll need to attach a shadow DOM to the `album art` component. You'll need to get the markup for the template and append it to the shadow root.
 
-## Conected Callback
+## Connected Callback
 
 In the connectedCallback lifecycle method, you'll need to access the `img`, `h3`, and `p` element and set the values for all the required attributes.
 
