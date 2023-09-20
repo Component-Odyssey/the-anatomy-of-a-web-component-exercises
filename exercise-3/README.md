@@ -1,4 +1,4 @@
-# Exercise 2: Styling Your Web Component
+# Exercise 3: Styling Your Web Component
 
 For this exercise, you'll need to ensure that the CSS is available to your component in the shadow DOM.
 
