@@ -19,9 +19,10 @@
       @import url('./styles.css');
     </style>
     <div>
-      <img class="square-aspect-ratio" src="" alt="" />
-      <h3></h3>
-      <p></p>
+      <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/romy-melny-nature.jpg"
+        alt="Romy Melny album cover" />
+      <h3>Romy Melny</h3>
+      <p>Nature</p>
     </div>
   </template>
 
@@ -59,49 +60,20 @@
     </h2>
     <hr />
 
-    <div class="padding-v-2 grid">
-      <album-art img-src="https://component-odyssey.s3.amazonaws.com/evelyn-hunter-ophelia.jpg"
-        alt="Evelyn Hunter album cover" artist-name="Evelyn Hunter" album-name="Ophelia"></album-art>
-      <album-art img-src="https://component-odyssey.s3.amazonaws.com/fastfall-the-ebon-enigmatique.png"
-        alt="Fastfall album cover" artist-name="Fastfall" album-name="The Ebon Enigmatique"></album-art>
+    <album-art></album-art>
 
-      <album-art img-src="https://component-odyssey.s3.amazonaws.com/jakayla-toney-self-titled.jpg"
-        alt="Jakalya Toney album cover" artist-name="Jakayla Toney" album-name="Self titled"></album-art>
-
-      <album-art img-src="https://component-odyssey.s3.amazonaws.com/romy-melny-nature.jpg" alt="Romy Melny album cover"
-        artist-name="Romy Melny" album-name="Nature"></album-art>
-
-      <album-art img-src="https://component-odyssey.s3.amazonaws.com/w95-959595.wav.png" alt="95 album cover"
-        artist-name="9 5" album-name="959595.wav"></album-art>
-
-      <album-art img-src="https://component-odyssey.s3.amazonaws.com/sable-dirge.png" alt="Sable album cover"
-        artist-name="Sable" album-name="Dirge"></album-art>
-    </div>
   </main>
-
 
   <script>
     class AlbumArt extends HTMLElement {
       constructor() {
         super();
 
-        const shadowRoot = this.attachShadow({ mode: 'open' });
-
         const template = document.getElementById('album-art-template');
         const templateContent = template.content;
 
+        const shadowRoot = this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(templateContent.cloneNode(true));
-      }
-
-      connectedCallback() {
-        const img = this.shadowRoot.querySelector('img');
-        const artistName = this.shadowRoot.querySelector('h3');
-        const albumName = this.shadowRoot.querySelector('p');
-
-        img.src = this.getAttribute('img-src');
-        img.alt = this.getAttribute('alt');
-        artistName.textContent = this.getAttribute('artist-name');
-        albumName.textContent = this.getAttribute('album-name');
       }
     }
 

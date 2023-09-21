@@ -11,25 +11,13 @@ test1El.test(() => {
 const test2El = document.getElementById('test-2');
 test2El.test(() => {
   const components = document.querySelectorAll('album-art');
-  return components.length === 6;
+  return components.length === 1;
 })
 
-
-const test3El = document.getElementById('test-3');
-test3El.test(() => {
-  const component = document.querySelectorAll('album-art')[3];
-
-  const hasImg = component.hasAttribute('img-src')
-  const hasAlt = component.hasAttribute('alt')
-  const hasArtistName = component.hasAttribute('artist-name')
-  const hasAlbumName = component.hasAttribute('album-name')
-
-  return hasImg && hasAlt && hasArtistName && hasAlbumName;
-})
 
 const test4El = document.getElementById('test-4');
 test4El.test(() => {
-  const component = document.querySelectorAll('album-art')[3];
+  const component = document.querySelectorAll('album-art')[0];
   const shadowRoot = component.shadowRoot;
 
   const imgEl = shadowRoot.querySelector('img');
@@ -41,11 +29,10 @@ test4El.test(() => {
   const artistName = artistNameEl.textContent;
   const albumName = albumNameEl.textContent;
 
-  const isValidImgSrc = imgSrc === 'https://component-odyssey.s3.amazonaws.com/w95-959595.wav.png'
-  const isValidImgAlt = imgAlt === '95 album cover'
-  const isValidArtistName = artistName === '9 5'
-  const isValidAlbumName = albumName === '959595.wav'
-
+  const isValidImgSrc = imgSrc === 'https://component-odyssey.s3.amazonaws.com/romy-melny-nature.jpg'
+  const isValidImgAlt = imgAlt === 'Romy Melny album cover'
+  const isValidArtistName = artistName === 'Romy Melny'
+  const isValidAlbumName = albumName === 'Nature'
 
   return isValidImgSrc && isValidImgAlt && isValidArtistName && isValidAlbumName;
 })

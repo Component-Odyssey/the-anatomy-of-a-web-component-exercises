@@ -15,16 +15,16 @@
 <body>
   <test-case-wrapper>
     <test-case id="test-1" description="component 'album-art' component has been registered to the window"></test-case>
-    <test-case id="test-2" description="6 'album-art' components exist in the document"></test-case>
-    <test-case id="test-3" description="'album-art' component has correct attributes"></test-case>
+    <test-case id="test-2" description="1 'album-art' components exist in the document"></test-case>
     <test-case id="test-4" description="'album-art' attributes have correct values"></test-case>
   </test-case-wrapper>
 
   <template id="album-art-template">
     <div>
-      <img class="square-aspect-ratio" src="" alt="" />
-      <h3></h3>
-      <p></p>
+      <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/romy-melny-nature.jpg"
+        alt="Romy Melny album cover" />
+      <h3>Romy Melny</h3>
+      <p>Nature</p>
     </div>
   </template>
 
@@ -62,42 +62,15 @@
     </h2>
     <hr />
 
-    <div class="padding-v-2 grid">
-      <album-art img-src="https://component-odyssey.s3.amazonaws.com/evelyn-hunter-ophelia.jpg"
-        alt="Evelyn Hunter album cover" artist-name="Evelyn Hunter" album-name="Ophelia"></album-art>
+    <!-- Add your component here -->
 
-      <div>
-        <img class="square-aspect-ratio"
-          src="https://component-odyssey.s3.amazonaws.com/fastfall-the-ebon-enigmatique.png"
-          alt="Fastfall album cover" />
-        <h3>Fastfall</h3>
-        <p>The Ebon Enigmatique</p>
-      </div>
-      <div>
-        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/jakayla-toney-self-titled.jpg"
-          alt="Jakalya Toney album cover" />
-        <h3>Jakayla Toney</h3>
-        <p>Self titled</p>
-      </div>
-      <div>
-        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/romy-melny-nature.jpg"
-          alt="Romy Melny album cover" />
-        <h3>Romy Melny</h3>
-        <p>Nature</p>
-      </div>
-      <div>
-        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/w95-959595.wav.png"
-          alt="95 album cover" />
-        <h3>9 5</h3>
-        <p>959595.wav</p>
-      </div>
-      <div>
-        <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/sable-dirge.png"
-          alt="Sable album cover" />
-        <h3>Sable</h3>
-        <p>Dirge</p>
-      </div>
+    <div>
+      <img class="square-aspect-ratio" src="https://component-odyssey.s3.amazonaws.com/romy-melny-nature.jpg"
+        alt="Romy Melny album cover" />
+      <h3>Romy Melny</h3>
+      <p>Nature</p>
     </div>
+
   </main>
 
   <script>
