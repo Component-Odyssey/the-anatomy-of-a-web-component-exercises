@@ -26,6 +26,13 @@ Each exercise has a corresponding README, so be sure to read the instructions.
 
 Repeat the above process for every single exercise.
 
+## Resources
+
+If you find that you haven't quite memorised the Web Component syntax, then please review the following documentation:
+- [MDN Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- [MDN Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
+- [MDN HTML Templates](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
+
 ## Troubleshooting
 
 If you have any problems, then please reach out in the Discord.
